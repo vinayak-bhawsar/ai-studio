@@ -2371,11 +2371,11 @@ Mood: ${sb.mood || 'N/A'}`;
             onExport={() => {
               if (activeStage === "screenplay" && screenplay) {
                 const scriptObj = screenplay.screenplay;
-                let fullText = `${scriptObj?.title || screenplay.title || "Untitled"}\n\n`;
-                if (scriptObj?.logline || screenplay.logline) {
-                  fullText += `LOGLINE: ${scriptObj?.logline || screenplay.logline}\n\n`;
+                let fullText = `${scriptObj?.title || "Untitled"}\n\n`;
+                if (scriptObj?.logline) {
+                  fullText += `LOGLINE: ${scriptObj.logline}\n\n`;
                 }
-                const scenes = scriptObj?.scenes || screenplay.scenes || [];
+                const scenes = scriptObj?.scenes || [];
                 scenes.forEach((s) => {
                   fullText += `\nSCENE ${s.scene_number}: ${s.heading}\n\n`;
                   if (s.action) fullText += `${s.action}\n\n`;
