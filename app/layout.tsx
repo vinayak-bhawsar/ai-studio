@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ReduxProvider } from "@/src/components/providers/ReduxProvider";
-import { ThemeProvider } from "@/src/components/providers/ThemeProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,17 +27,21 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-      suppressHydrationWarning
+      style={{ colorScheme: "light" }}
     >
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{localStorage.removeItem('theme');document.documentElement.classList.remove('dark');}catch(e){}",
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
       </head>
-      <body className="min-h-full flex flex-col bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <ReduxProvider>{children}</ReduxProvider>
-        </ThemeProvider>
+      <body className="min-h-full flex flex-col bg-white text-zinc-900">
+        <ReduxProvider>{children}</ReduxProvider>
       </body>
     </html>
   );

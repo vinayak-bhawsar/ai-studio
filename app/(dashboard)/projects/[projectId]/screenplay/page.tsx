@@ -2,7 +2,6 @@ import { Suspense } from "react";
 import { Loader2 } from "lucide-react";
 import { ScreenplayClientView } from "@/src/features/screenplay/components/ScreenplayClientView";
 
-export const instant = false;
 
 interface ScreenplayPageProps {
   params: Promise<{ projectId: string }>;

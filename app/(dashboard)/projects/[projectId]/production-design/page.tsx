@@ -2,7 +2,6 @@ import { Suspense } from "react";
 import { Loader2 } from "lucide-react";
 import { ProjectClientView } from "@/src/features/projects/components/ProjectClientView";
 
-export const instant = false;
 
 interface ProductionDesignPageProps {
   params: Promise<{ projectId: string }>;

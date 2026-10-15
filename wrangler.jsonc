@@ -4,6 +4,7 @@
   "name": "ai-studio-frontend",
   "compatibility_date": "2026-10-12",
   "compatibility_flags": [
+    "nodejs_compat",
     "global_fetch_strictly_public"
   ],
   "assets": {
@@ -21,5 +22,10 @@
   },
   "observability": {
     "enabled": true
+  },
+  "previews": {
+    "images": {
+      "binding": "IMAGES"
+    }
   }
 }

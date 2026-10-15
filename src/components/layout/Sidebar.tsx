@@ -14,7 +14,6 @@ import {
   Users,
   X,
 } from "lucide-react";
-import { ThemeToggle } from "@/src/components/ui/ThemeToggle";
 
 interface SidebarProps {
   onCloseMobile?: () => void;
@@ -180,14 +179,6 @@ export function Sidebar({
 
         {/* Bottom Nav Actions */}
         <div className="space-y-0.5 pt-1">
-          <div className="flex items-center p-2 justify-between">
-            <div className="flex items-center">
-              <div className="w-5 flex justify-center shrink-0 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <span className="ml-3 text-zinc-500 font-medium opacity-0 group-hover:opacity-100 transition-opacity w-0 group-hover:w-auto overflow-hidden">Theme</span>
-            </div>
-            <div className="opacity-0 group-hover:opacity-100 transition-opacity"><ThemeToggle /></div>
-          </div>
-          
           <div className="flex items-center p-2 text-zinc-500 font-medium hover:bg-zinc-100 hover:text-zinc-900 rounded-lg transition-colors cursor-pointer">
             <div className="w-5 flex justify-center shrink-0">
               <Settings className="w-4 h-4 text-zinc-400" />

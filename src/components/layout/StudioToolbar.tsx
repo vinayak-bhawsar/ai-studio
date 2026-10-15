@@ -203,10 +203,6 @@ export function StudioToolbar({
             )}
           </button>
         )}
-
-        <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-50 hover:opacity-100 transition-opacity">
-          {/* Moon icon placeholder matching image, theme toggle */}
-        </div>
       </div>
     </div>
   );

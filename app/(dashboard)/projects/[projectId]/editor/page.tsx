@@ -2,7 +2,6 @@ import { Suspense } from "react";
 import { Loader2 } from "lucide-react";
 import { EditorClientView } from "@/src/features/editor/components/EditorClientView";
 
-export const instant = false;
 
 interface EditorPageProps {
   params: Promise<{ projectId: string }>;
