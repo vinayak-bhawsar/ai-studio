@@ -13,7 +13,7 @@
   "services": [
     {
       "binding": "WORKER_SELF_REFERENCE",
-      "service": "ai-video-studio-frontend"
+      "service": "ai-studio-frontend"
     }
   ],
   "images": {
